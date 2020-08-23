@@ -12,3 +12,5 @@ Mention Every Requirement for user here-
 6.Recommendations feature(Not necessary)
 7.SEO 
 8.Content should be minimal but important
+9.Company Name 
+10.Automated Graphs for Visitors and most visited tourist destinations
