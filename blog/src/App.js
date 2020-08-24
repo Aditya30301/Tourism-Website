@@ -11,9 +11,13 @@ import Navigate from "./Menu/Navigate";
 import VideoGallery from "./Menu/VideoGallery";
 
 //bootstrap5 css styles for appying
-import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
-import "../node_modules/bootstrap/dist/js/bootstrap.bundle";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap/dist/js/bootstrap.bundle";
+
 import Navbar from "./Component/Navbar";
+import ContactUs from "./Component/ContactUs";
+import Cards from "./Component/Cards";
+
 //Routing these Component
 import { Route, Switch, Redirect } from "react-router-dom";
 import "./App.css";
@@ -22,6 +26,7 @@ function App() {
   return (
     <div>
       <Navbar />
+
       <Switch>
         <Route exact path="/" component={Home} />
         <Route exact path="/About" component={About} />
@@ -32,6 +37,8 @@ function App() {
         {/*Redirect url if any of those match*/}
         <Redirect to="/" />
       </Switch>
+      <Cards />
+      <ContactUs />
     </div>
   );
 }
