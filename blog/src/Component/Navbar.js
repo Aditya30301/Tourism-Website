@@ -1,6 +1,6 @@
 //component loaded from https://v5.getbootstrap.com/
 import React from "react";
-
+import { NavLink } from "react-router-dom";
 const Navbar = () => {
   return (
     <>
@@ -9,9 +9,9 @@ const Navbar = () => {
           <div className="column">
             <nav className="navbar navbar-expand-lg navbar-light" id="navbar">
               <div className="container-fluid">
-                <a className="navbar-brand" href="#">
+                <NavLink className="navbar-brand" to="/">
                   Logo
-                </a>
+                </NavLink>
                 <button
                   className="navbar-toggler"
                   type="button"
@@ -29,42 +29,69 @@ const Navbar = () => {
                 >
                   <ul className="navbar-nav ml-auto mb-2 mb-lg-0">
                     <li className="nav-item">
-                      <a
-                        className="nav-link active"
-                        aria-current="page"
-                        href="#"
+                      <NavLink
+                        exact
+                        className="nav-link"
+                        activeClassName="menu_active"
+                        to="/"
                       >
                         Home
-                      </a>
+                      </NavLink>
                     </li>
+
                     <li className="nav-item">
-                      <a className="nav-link" href="#">
+                      <NavLink
+                        exact
+                        className="nav-link"
+                        activeClassName="menu_active"
+                        to="/About"
+                      >
                         About
-                      </a>
+                      </NavLink>
                     </li>
 
                     <li className="nav-item">
-                      <a className="nav-link" href="#">
+                      <NavLink
+                        exact
+                        className="nav-link"
+                        activeClassName="menu_active"
+                        to="/Service"
+                      >
                         Services
-                      </a>
+                      </NavLink>
                     </li>
 
                     <li className="nav-item">
-                      <a className="nav-link" href="#">
+                      <NavLink
+                        exact
+                        className="nav-link"
+                        activeClassName="menu_active"
+                        to="/Contact"
+                      >
                         Contact
-                      </a>
+                      </NavLink>
                     </li>
 
                     <li className="nav-item">
-                      <a className="nav-link" href="#">
+                      <NavLink
+                        exact
+                        className="nav-link"
+                        activeClassName="menu_active"
+                        to="/VideoGallery"
+                      >
                         Video Gallery
-                      </a>
+                      </NavLink>
                     </li>
 
                     <li className="nav-item">
-                      <a className="nav-link" href="#">
+                      <NavLink
+                        exact
+                        className="nav-link"
+                        activeClassName="menu_active"
+                        to="/Navigate"
+                      >
                         Navigate
-                      </a>
+                      </NavLink>
                     </li>
                   </ul>
                 </div>
