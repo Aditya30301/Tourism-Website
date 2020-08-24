@@ -1,0 +1,19 @@
+.ContactUs {
+  padding: 20px;
+  margin-left: 100px;
+  margin-right: 100px;
+  margin-bottom: 200px;
+  margin-top: 200px;
+  border: grey;
+  border-top-left-radius: 100px;
+  border-bottom-right-radius: 100px;
+  border-style: solid;
+  border-width: 1px;
+}
+.Cards {
+  margin-left: 200px;
+  margin-right: 200px;
+}
+.ContactUsHeading {
+  text-align: center;
+}

@@ -1,5 +1,4 @@
 //component loaded from https://v5.getbootstrap.com/
-
 import React from "react";
 
 const Navbar = () => {
@@ -8,7 +7,7 @@ const Navbar = () => {
       <div className="container-fluid bg">
         <div className="row">
           <div className="column">
-            <nav className="navbar navbar-expand-lg navbar-light ">
+            <nav className="navbar navbar-expand-lg navbar-light" id="navbar">
               <div className="container-fluid">
                 <a className="navbar-brand" href="#">
                   Logo
