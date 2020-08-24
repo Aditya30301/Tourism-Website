@@ -15,12 +15,13 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle";
 
 import Navbar from "./Component/Navbar";
-import ContactUs from "./Component/ContactUs";
-import Cards from "./Component/Cards";
 
 //Routing these Component
 import { Route, Switch, Redirect } from "react-router-dom";
 import "./App.css";
+
+//footer
+import { footer } from "./Component/footer/footer";
 
 function App() {
   return (
@@ -37,8 +38,8 @@ function App() {
         {/*Redirect url if any of those match*/}
         <Redirect to="/" />
       </Switch>
-      <Cards />
-      <ContactUs />
+      {/*footer*/}
+      <footer />
     </div>
   );
 }
