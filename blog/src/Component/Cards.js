@@ -10,8 +10,6 @@ class Cards extends Component {
           <Card.Img
             variant="top"
             src="https://www.nativeplanet.com/img/2018/08/andamannicobar-1535112781.jpg"
-            height="600"
-            width="800"
           />
           <Card.Body>
             <Card.Text>
