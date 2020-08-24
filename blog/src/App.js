@@ -31,7 +31,7 @@ function App() {
         <Route exact path="/Contact" component={Contact} />
         <Route exact path="/Service" component={Service} />
 
-        {/*Redirect url if any of those match*/}
+        {/*Redirect url if any of those match*/}  
         <Redirect to="/" />
       </Switch>
       <Cards />
