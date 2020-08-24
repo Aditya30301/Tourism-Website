@@ -7,6 +7,8 @@ import Home from "./Menu/Home";
 import About from "./Menu/About";
 import Contact from "./Menu/Contact";
 import Service from "./Menu/Service";
+import Navigate from "./Menu/Navigate";
+import VideoGallery from "./Menu/VideoGallery";
 
 //bootstrap5 css styles for appying
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
@@ -25,7 +27,8 @@ function App() {
         <Route exact path="/About" component={About} />
         <Route exact path="/Contact" component={Contact} />
         <Route exact path="/Service" component={Service} />
-
+        <Route exact path="/Navigate" component={Navigate} />
+        <Route exact path="/VideoGallery" component={VideoGallery} />
         {/*Redirect url if any of those match*/}
         <Redirect to="/" />
       </Switch>

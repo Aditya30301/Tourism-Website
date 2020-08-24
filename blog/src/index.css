@@ -16,6 +16,12 @@ body {
   font-family: "Mulish", sans-serif;
 }
 
+.menu_active {
+  font-weight: bold;
+  text-emphasis-color: #218f76;
+  border-bottom: 1px solid #218f76;
+}
+
 .navbar {
   background-color: white !important;
 }
@@ -25,7 +31,55 @@ body {
   color: #53e0bc !important;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+.header-img {
+  text-align: center;
+}
+
+#header {
+  width: 100%;
+  height: 80vh;
+  margin-top: 70px;
+}
+
+#header h1 {
+  margin: 0 0 10px 0;
+  font-size: 38px;
+  font-weight: 700;
+  color: solid black;
+}
+
+#header h2 {
+  font-size: 24px;
+  color: solid black;
+}
+
+#header .animated {
+  animation: up-down 2s ease-in-out infinite alternate-reverse both;
+}
+
+.brand-name {
+  font-size: 0.9em !important;
+  color: #53e0bc !important;
+}
+
+.navbar a :hover {
+  color: #218f76 !important;
+}
+
+@-webkit-keyframes up-down {
+  0% {
+    transform: translateY(10px);
+  }
+  100% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes up-down {
+  0% {
+    transform: translateY(10px);
+  }
+  100% {
+    transform: translateY(-10px);
+  }
 }

@@ -1,16 +1,16 @@
 import React from "react";
 
-const Contact = () => {
+const Navigate = () => {
   return (
     <>
       <div className="container-fluid nav_bg" container>
         <div className="row">
           <div className="col-10 mx-auto"></div>
-          <h1>Contact Form</h1>
+          <h1>Maps Intregations</h1>
         </div>
       </div>
     </>
   );
 };
 
-export default Contact;
+export default Navigate;
