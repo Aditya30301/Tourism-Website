@@ -39,7 +39,7 @@ function App() {
         <Redirect to="/" />
       </Switch>
       {/*footer*/}
-      <footer />
+      <footer></footer>
     </div>
   );
 }
