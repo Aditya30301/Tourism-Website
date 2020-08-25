@@ -1,9 +1,10 @@
 //component loaded from https://v5.getbootstrap.com/
 import React from "react";
 import { NavLink } from "react-router-dom";
+import "./Components.css";
 const Navbar = () => {
   return (
-    <>
+    <div className="Header">
       <div className="container-fluid bg">
         <div className="row">
           <div className="column">
@@ -100,7 +101,7 @@ const Navbar = () => {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

@@ -1,8 +1,9 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
+import "../Component/Components.css";
 const Home = () => {
   return (
-    <>
+    <div className="MainComponent">
       <section id="header" className="d-flex align-items-center">
         <div className="container-fluid nav_bg" container>
           <div className="row">
@@ -10,10 +11,9 @@ const Home = () => {
               <div className="row">
                 <div className="col-md-6 pt-5 pt-lg-0 order-2 order-lg-1 d-flex justify-content-center flex-column">
                   <h1>
-                    Find the unseened Places at Andaman.
+                    Explore the beauty of Andaman.
                     <strong className="brand-name">
-                      Remove your foot involve in the mysertry of Searching
-                      great Destinations
+                      Induldge in the mysertry of Searching great Destinations
                     </strong>
                   </h1>
                   <h2 className="my-3">
@@ -26,7 +26,10 @@ const Home = () => {
                   </div>
                 </div>
                 {/*Image*/}
-                <div className="col-lg-6 order-1  order-lg-2 header-img">
+                <div
+                  id="gif"
+                  className="col-lg-6 order-1  order-lg-2 header-img"
+                >
                   <img
                     src={
                       "https://www.tupperwarebrands.com.my/e-perks/img/city.gif"
@@ -40,7 +43,7 @@ const Home = () => {
           </div>
         </div>
       </section>
-    </>
+    </div>
   );
 };
 

@@ -11,6 +11,30 @@
   border-width: 1px;
 }
 
+.footer {
+  display: grid;
+  grid-template-columns: auto auto auto;
+}
+.footerText {
+  padding: 10px;
+}
+
 .ContactUsHeading {
   text-align: center;
+}
+.Header {
+  margin-bottom: 100px;
+}
+.col {
+  padding: 10px;
+}
+.CyanText {
+  color: #00e699;
+}
+.footerSpace {
+  margin-top: 10px;
+}
+.MainComponent {
+  margin-bottom: 200px;
+  margin-top: 150px;
 }

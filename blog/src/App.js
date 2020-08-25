@@ -21,7 +21,7 @@ import { Route, Switch, Redirect } from "react-router-dom";
 import "./App.css";
 
 //footer
-import { footer } from "./Component/footer/footer";
+import Footer from "./Component/footer/Footer";
 
 function App() {
   return (
@@ -39,7 +39,7 @@ function App() {
         <Redirect to="/" />
       </Switch>
       {/*footer*/}
-      <footer></footer>
+      <Footer />
     </div>
   );
 }

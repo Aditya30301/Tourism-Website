@@ -1,15 +1,16 @@
 import React, { Component } from "react";
 import { Form, Button } from "react-bootstrap";
 import "./Components.css";
+import Container from "@material-ui/core/Container";
 class ContactUs extends Component {
   state = {};
   render() {
     return (
-      <>
+      <Container maxWidth="sm">
         <div className="container-fluid nav_bg" container>
           <div className="row">
             <div className="col-10 mx-auto d-flex align-items-center"></div>
-            <div class="ContactUs">
+            <div className="ContactUs">
               <div className="ContactUsHeading">
                 <h1>Contact Us</h1>
                 <hr />
@@ -31,12 +32,14 @@ class ContactUs extends Component {
                 <Form.Group controlId="exampleForm.ControlSelect1">
                   <Form.Label>Package</Form.Label>
                   <Form.Control as="select">
-                    <option>Honey Moon</option>
-                    <option>Family</option>
-                    <option>Full</option>
-                    <option>Spa n Relax</option>
-                    <option>Immersive</option>
-                    <option>Coustomized</option>
+                    <option>Quick Havelock</option>
+                    <option>Splendid Andaman</option>
+                    <option>Splendid Havelock</option>
+                    <option>Splendid Andaman and Neil</option>
+                    <option>Magical Havelock with Neil</option>
+                    <option>Magical Havelock</option>
+                    <option>Amazing Andaman with Neil</option>
+                    <option>Mesmerizing Andaman</option>
                   </Form.Control>
                 </Form.Group>
                 <Form.Group controlId="exampleForm.ControlSelect2">
@@ -68,7 +71,7 @@ class ContactUs extends Component {
             </div>
           </div>
         </div>
-      </>
+      </Container>
     );
   }
 }
