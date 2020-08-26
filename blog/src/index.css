@@ -31,10 +31,6 @@ body {
   color: #53e0bc !important;
 }
 
-.header-img {
-  text-align: center;
-}
-
 #header {
   width: 100%;
   height: 80vh;
@@ -64,6 +60,42 @@ body {
 
 .navbar a :hover {
   color: #218f76 !important;
+}
+
+/*responsive code*/
+@media (max-width: 991px) {
+  #header {
+    height: 80vh;
+    text-align: center;
+  }
+
+  #header .header-img {
+    text-align: center;
+  }
+
+  #header .header-img img {
+    height: 60%;
+    width: 80%;
+  }
+}
+
+@media (max-width: 768px) {
+  #header {
+    margin-top: 20px;
+  }
+
+  #header h1 {
+    font-size: 27px;
+  }
+
+  #header h2 {
+    font-size: 17px;
+  }
+
+  #header .header-img {
+    height: 100%;
+    width: 100%;
+  }
 }
 
 @-webkit-keyframes up-down {

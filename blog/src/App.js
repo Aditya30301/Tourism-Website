@@ -8,7 +8,7 @@ import About from "./Menu/About";
 import Contact from "./Menu/Contact";
 import Service from "./Menu/Service";
 import Navigate from "./Menu/Navigate";
-import VideoGallery from "./Menu/VideoGallery";
+import PhotoGallery from "./Menu/PhotoGallery";
 
 //bootstrap5 css styles for appying
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -21,7 +21,7 @@ import { Route, Switch, Redirect } from "react-router-dom";
 import "./App.css";
 
 //footer
-import Footer from "./Component/footer/Footer";
+import Footer from "./Component/footer/footer";
 
 function App() {
   return (
@@ -34,7 +34,7 @@ function App() {
         <Route exact path="/Contact" component={Contact} />
         <Route exact path="/Service" component={Service} />
         <Route exact path="/Navigate" component={Navigate} />
-        <Route exact path="/VideoGallery" component={VideoGallery} />
+        <Route exact path="/PhotoGallery" component={PhotoGallery} />
         {/*Redirect url if any of those match*/}
         <Redirect to="/" />
       </Switch>
