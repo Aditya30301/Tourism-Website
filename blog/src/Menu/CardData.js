@@ -1,6 +1,6 @@
 const datas = [
   {
-    id: "1",
+    id: 1,
     imageLink:
       "https://haptik-website-images.haptik.ai/assets/img/IVA-whitepaper.png",
     name: "Quick Havelock",
@@ -21,7 +21,7 @@ const datas = [
     fullDescription8: "",
   },
   {
-    id: "2",
+    id: 2,
     imageLink:
       "https://haptik-website-images.haptik.ai/assets/img/IVA-whitepaper.png",
     name: "Splendid Andaman",
@@ -42,7 +42,7 @@ const datas = [
     fullDescription8: "",
   },
   {
-    id: "3",
+    id: 3,
     imageLink:
       "https://haptik-website-images.haptik.ai/assets/img/IVA-whitepaper.png",
     name: "Splendid Havelock",
@@ -63,7 +63,7 @@ const datas = [
     fullDescription8: "",
   },
   {
-    id: "4",
+    id: 4,
     imageLink:
       "https://haptik-website-images.haptik.ai/assets/img/IVA-whitepaper.png",
     name: "Splendid Andaman & Neil",
@@ -84,7 +84,7 @@ const datas = [
     fullDescription8: "",
   },
   {
-    id: "5",
+    id: 5,
     imageLink:
       "https://haptik-website-images.haptik.ai/assets/img/IVA-whitepaper.png",
     name: "Magical Havelock with Neil",
@@ -106,7 +106,7 @@ const datas = [
     fullDescription8: "",
   },
   {
-    id: "6",
+    id: 6,
     imageLink:
       "https://haptik-website-images.haptik.ai/assets/img/IVA-whitepaper.png",
     name: "Magical Havelock ",
@@ -128,7 +128,7 @@ const datas = [
     fullDescription8: "",
   },
   {
-    id: "7",
+    id: 7,
     imageLink:
       "https://haptik-website-images.haptik.ai/assets/img/IVA-whitepaper.png",
     name: "Amazing Andaman with Neil",
@@ -151,7 +151,7 @@ const datas = [
     fullDescription8: "",
   },
   {
-    id: "8",
+    id: 8,
     imageLink:
       "https://haptik-website-images.haptik.ai/assets/img/IVA-whitepaper.png",
     name: "Mesmerizing Andaman ",

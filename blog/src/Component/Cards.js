@@ -12,6 +12,7 @@ import StepLabel from "@material-ui/core/StepLabel";
 import StepContent from "@material-ui/core/StepContent";
 import Button from "@material-ui/core/Button";
 import Paper from "@material-ui/core/Paper";
+import Data from "../Menu/CardData";
 
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 
@@ -54,23 +55,26 @@ function getSteps(n) {
   return arr;
 }
 
-function getStepContent(step) {
-  console.log(step);
-  switch (step) {
+function getStepContent(step, setActiveSteps) {
+  //console.log(setActiveSteps);
+
+  //console.log(Data[step - 1].name);
+  switch (setActiveSteps + 1) {
     case 1:
-      return `dsfjhsdhfjsjfjjhgj`;
+      return Data[step - 1].fullDescription1;
+
     case 2:
-      return "sahdhiahs";
+      return Data[step - 1].fullDescription2;
     case 3:
-      return step.fullDescription3;
+      return Data[step - 1].fullDescription3;
     case 4:
-      return;
+      return Data[step - 1].fullDescription4;
     case 5:
-      return `sahdhakjhdkjahj`;
+      return Data[step - 1].fullDescription5;
     case 6:
-      return step.fullDescription6;
+      return Data[step - 1].fullDescription6;
     case 7:
-      return "sdkjhaskfhkhi";
+      return Data[step - 1].fullDescription7;
     case 8:
       return step.fullDescription8;
     default:
@@ -82,7 +86,7 @@ export default function Cards(props) {
   const classes = useStyles();
   const [activeStep, setActiveStep] = React.useState(0);
   const steps = getSteps(props.num);
-
+  console.log(activeStep);
   const handleNext = () => {
     setActiveStep((prevActiveStep) => prevActiveStep + 1);
   };
@@ -141,7 +145,9 @@ export default function Cards(props) {
               <Step key={label}>
                 <StepLabel>{label}</StepLabel>
                 <StepContent>
-                  <Typography>{getStepContent(1)}</Typography>
+                  <Typography>
+                    {getStepContent(props.id, activeStep)}
+                  </Typography>
                   <div className={classes.actionsContainer}>
                     <div>
                       <Button
@@ -166,7 +172,7 @@ export default function Cards(props) {
               </Step>
             ))}
           </Stepper>
-          {activeStep === steps.length && (
+          {activeStep === steps.length - 1 && (
             <Paper square elevation={0} className={classes.resetContainer}>
               <Typography>Your Journey - Completes&apos;Here</Typography>
               <Button
