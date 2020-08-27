@@ -141,7 +141,7 @@ export default function Cards(props) {
               <Step key={label}>
                 <StepLabel>{label}</StepLabel>
                 <StepContent>
-                  <Typography>{getStepContent(1)}</Typography>
+                  <Typography>{getStepContent(i)}</Typography>
                   <div className={classes.actionsContainer}>
                     <div>
                       <Button
