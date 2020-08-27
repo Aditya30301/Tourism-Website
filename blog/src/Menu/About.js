@@ -1,6 +1,7 @@
 import React from "react";
 import "../Component/Components.css";
 import { Container } from "react-bootstrap";
+import "./About.css";
 import { NavLink } from "react-router-dom";
 //import { Carousel } from "react-bootstrap";
 const About = () => {
@@ -16,9 +17,14 @@ const About = () => {
           }}
         >
           GET TO KNOW US
-          <NavLink to="/Service" className="btn btn-outline-dark">
-            Start Adventure
-          </NavLink>
+          <br />
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <a href="#" className="btnAB">
+            Start Exploring
+          </a>
         </h2>
         <hr />
         <h5 style={{ textAlign: "center", fontFamily: "revert" }}>

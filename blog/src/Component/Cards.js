@@ -14,7 +14,6 @@ import Button from "@material-ui/core/Button";
 import Paper from "@material-ui/core/Paper";
 import Data from "../Menu/CardData";
 import DynamicFeedIcon from "@material-ui/icons/DynamicFeed";
-import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 
 const useStyles = makeStyles((theme) => ({
   expand: {
