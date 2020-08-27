@@ -111,7 +111,7 @@ export default function Cards(props) {
         <img
           src={props.imageLink}
           className="img-responsive card-img-top"
-          style={{ width: "auto", height: 300 }}
+          style={{ width: 1235, height: 300 }}
           alt="cardimg"
         />
         <div className="card-body">
@@ -145,13 +145,12 @@ export default function Cards(props) {
               <Step key={label}>
                 <StepLabel>{label}</StepLabel>
                 <StepContent>
-<<<<<<< HEAD
                   <Typography>{getStepContent(i)}</Typography>
-=======
+
                   <Typography>
                     {getStepContent(props.id, activeStep)}
                   </Typography>
->>>>>>> 56ebdad9216afe7eb44177e23ddd0254cfde44db
+
                   <div className={classes.actionsContainer}>
                     <div>
                       <Button
