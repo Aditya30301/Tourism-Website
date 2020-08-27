@@ -5,7 +5,7 @@ import LinkedInIcon from "@material-ui/icons/LinkedIn";
 import "./footer.css";
 const Footer = () => {
   return (
-    <div>
+    <div className="FooterBox">
       <footer className="footer-distributed">
         <div className="footer-left">
           <h3>

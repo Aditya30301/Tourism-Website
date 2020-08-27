@@ -21,7 +21,7 @@ import { Route, Switch, Redirect } from "react-router-dom";
 import "./App.css";
 
 //footer
-import Footer from "./Component/footer/footer";
+import Footer from "./Component/footer/Footer.js";
 
 function App() {
   return (

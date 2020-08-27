@@ -14,11 +14,12 @@ const Home = () => {
                   <h1>
                     Explore the beauty of Andaman.
                     <strong className="brand-name">
-                      Induldge in the mysertry of Searching great Destinations
+                      Induldge in the Adventure of Searching great Destinations
                     </strong>
                   </h1>
                   <h2 className="my-3">
-                    We are the team of talented Guide making your Destinations
+                    We are a team of talented Guides making your Holidays a
+                    experience to remember
                   </h2>
                   <div className="mt-3">
                     <NavLink to="/Service" className="btn btn-outline-dark">

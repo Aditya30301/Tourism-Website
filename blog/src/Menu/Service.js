@@ -1,7 +1,8 @@
 import React from "react";
+
 import CardHandler from "../Component/Cards";
 import { Grow } from "@material-ui/core";
-import datas from "../Menu/CardData";
+import datas from "./CardData";
 
 const cardObject = datas.map(function (data) {
   return (
