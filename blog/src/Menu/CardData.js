@@ -6,6 +6,7 @@ const datas = [
     name: "Quick Havelock",
     duration: "3 Nights / 4 days",
     description: "Port Blair – 3 Nights",
+    num: 4,
     fullDescription1:
       "DAY 1 :  Arrive Port Blair:Check in to Hotel,After Lunch proceeds to Cobryn Cove beach. Evening We visit Cellular Jail for the Light & Sound Show. Overnight in Port Blair ",
 
@@ -25,6 +26,7 @@ const datas = [
       "https://haptik-website-images.haptik.ai/assets/img/IVA-whitepaper.png",
     name: "Splendid Andaman",
     duration: "4 Nights / 5 Days",
+    num: 5,
     description: "Port Blair – 3 Nights , Havelock – 1 Night ",
     fullDescription1:
       "DAY 1:  Arrive Port Blair: Check in to Hotel, After Lunch proceed to Cobryn Cove beach. Evening We visit Cellular Jail for the Light & Sound Show.",
@@ -45,6 +47,7 @@ const datas = [
       "https://haptik-website-images.haptik.ai/assets/img/IVA-whitepaper.png",
     name: "Splendid Havelock",
     duration: "4 Nights / 5 Days ",
+    num: 5,
     description: "Port Blair – 2 Nights , Havelock – 2 Nights ",
     fullDescription1:
       "DAY 1:  Arrive Port Blair:Check in to Hotel,After Lunch proceed to Cobryn Cove beach. Evening We visit Cellular Jail for the Light & Sound Show.",
@@ -65,6 +68,7 @@ const datas = [
       "https://haptik-website-images.haptik.ai/assets/img/IVA-whitepaper.png",
     name: "Splendid Andaman & Neil",
     duration: "4 Nights / 5 Days",
+    num: 5,
     description: "Port Blair – 2 Nights , Havelock – 1 Night , Neil – 1 Night",
     fullDescription1:
       "DAY 1:  Arrive Port Blair: Check in to Hotel, After Lunch proceed to Cobryn Cove beach. Evening We visit Cellular Jail for the Light & Sound Show",
@@ -85,6 +89,7 @@ const datas = [
       "https://haptik-website-images.haptik.ai/assets/img/IVA-whitepaper.png",
     name: "Magical Havelock with Neil",
     duration: "5 Nights / 6 Days",
+    num: 6,
     description: "Port Blair – 2 Nights , Havelock – 2 Night , Neil – 1 Night",
     fullDescription1:
       "DAY 1:  Arrive Port Blair: Check in to Hotel, After Lunch Proceed to Corbyn Cove beach. Evening We visit Cellular Jail for the Light & Sound Show",
@@ -107,6 +112,7 @@ const datas = [
     name: "Magical Havelock ",
     duration: "5 Nights / 6 Days",
     description: "Port Blair – 3 Nights , Havelock – 2 Nights ",
+    num: 6,
     fullDescription1:
       "DAY 1:  Arrive at Port Blair: Check in to Hotel, After Lunch Proceed to Corbyn Cove beach. Evening We visit Cellular Jail for the Light & Sound Show",
     fullDescription2:
@@ -128,6 +134,7 @@ const datas = [
     name: "Amazing Andaman with Neil",
     duration: "6 Nights / 7 Days",
     description: "Port Blair – 3 Nights , Havelock – 2 Nights , Neil – 1 Night",
+    num: 7,
     fullDescription1:
       "DAY 1:  Arrive Port Blair:Check in to Hotel,After Lunch proceed to Cobryn Cove beach. Evening We visit Cellular Jail for the Light & Sound Show",
     fullDescription2:
@@ -150,6 +157,7 @@ const datas = [
     name: "Mesmerizing Andaman ",
     duration: "7 Nights / 8 Days",
     description: "Port Blair – 4 Nights , Havelock – 2 Nights , Neil – 1 Night",
+    num: 7,
     fullDescription1:
       "DAY 1:  Arrive Port Blair:Check in to Hotel,After Lunch proceed to Cobryn Cove beach. Evening We visit Cellular Jail for the Light & Sound Show. Overnight in Port Blair.",
     fullDescription2:
