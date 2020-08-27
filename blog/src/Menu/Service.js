@@ -7,6 +7,7 @@ import datas from "./CardData";
 const cardObject = datas.map(function (data) {
   return (
     <CardHandler
+      key={data.id}
       id={data.id}
       num={data.num}
       name={data.name}
