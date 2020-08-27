@@ -13,7 +13,7 @@ import StepContent from "@material-ui/core/StepContent";
 import Button from "@material-ui/core/Button";
 import Paper from "@material-ui/core/Paper";
 import Data from "../Menu/CardData";
-
+import DynamicFeedIcon from "@material-ui/icons/DynamicFeed";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 
 const useStyles = makeStyles((theme) => ({
@@ -131,7 +131,7 @@ export default function Cards(props) {
             aria-expanded={expanded}
             aria-label="show more"
           >
-            <ExpandMoreIcon />
+            <DynamicFeedIcon fontSize="large" />
           </IconButton>
         </CardActions>
 
