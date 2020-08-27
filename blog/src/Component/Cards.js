@@ -115,11 +115,11 @@ export default function Cards(props) {
           alt="cardimg"
         />
         <div className="card-body">
-          <h5 className="card-title">{props.name}</h5>
-          <p className="card-text">{props.description}</p>
-          <p className="card-text">
+          <h4 className="card-title">{props.name}</h4>
+          <h5 className="card-text">{props.description}</h5>
+          <h5 className="card-text">
             <small className="text-muted">{props.duration}</small>
-          </p>
+          </h5>
         </div>
 
         <CardActions disableSpacing>
@@ -136,7 +136,7 @@ export default function Cards(props) {
         </CardActions>
 
         <Collapse in={expanded} timeout="auto" unmountOnExit>
-          <Typography variant="h3">
+          <Typography variant="h5">
             <center>Trip Details:</center>
           </Typography>
 
