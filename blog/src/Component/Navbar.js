@@ -78,9 +78,9 @@ const Navbar = () => {
                         exact
                         className="nav-link"
                         activeClassName="menu_active"
-                        to="/VideoGallery"
+                        to="/PhotoGallery"
                       >
-                        Video Gallery
+                        Photo Gallery
                       </NavLink>
                     </li>
 
