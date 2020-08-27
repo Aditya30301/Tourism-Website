@@ -12,6 +12,7 @@ const About = () => {
             textAlign: "center",
             color: "#00e699",
             fontFamily: "revert",
+            justifyContent: "center",
           }}
         >
           GET TO KNOW US
