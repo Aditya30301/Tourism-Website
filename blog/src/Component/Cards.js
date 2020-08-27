@@ -62,7 +62,6 @@ function getStepContent(step, setActiveSteps) {
   switch (setActiveSteps + 1) {
     case 1:
       return Data[step - 1].fullDescription1;
-
     case 2:
       return Data[step - 1].fullDescription2;
     case 3:
@@ -76,7 +75,8 @@ function getStepContent(step, setActiveSteps) {
     case 7:
       return Data[step - 1].fullDescription7;
     case 8:
-      return step.fullDescription8;
+      return Data[step - 1].fullDescription8;
+
     default:
       return "Helllo ";
   }
