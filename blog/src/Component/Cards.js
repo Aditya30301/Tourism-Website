@@ -131,7 +131,7 @@ export default function Cards(props) {
             aria-expanded={expanded}
             aria-label="show more"
           >
-            <DynamicFeedIcon fontSize="large" />
+            <DynamicFeedIcon fontSize="large" color="primary" />
           </IconButton>
         </CardActions>
 
