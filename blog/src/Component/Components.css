@@ -1,7 +1,6 @@
 .ContactUs {
   padding: 20px;
-  margin-left: 50px;
-  margin-right: 50px;
+
   margin-bottom: 100px;
   margin-top: 100px;
   border: grey;
@@ -37,4 +36,30 @@
 .MainComponent {
   margin-bottom: 200px;
   margin-top: 150px;
+}
+.Cards {
+  margin: 10px;
+}
+.ContainerRight {
+  background-color: #ffffe6;
+  height: 90%;
+  width: 90%;
+  align-self: auto;
+  align-content: center;
+  align-items: center;
+  text-align: center;
+}
+.ContainerLeft {
+  background-color: #ccffff;
+  height: 90%;
+  width: 90%;
+  align-self: auto;
+  align-content: center;
+  align-items: center;
+  text-align: center;
+}
+.BoxContainer {
+  height: inherit;
+  width: inherit;
+  display: flex;
 }
