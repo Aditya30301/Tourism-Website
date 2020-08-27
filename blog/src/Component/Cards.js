@@ -78,7 +78,7 @@ function getStepContent(step, setActiveSteps) {
     case 8:
       return step.fullDescription8;
     default:
-      return "Helllo ";
+      return "";
   }
 }
 
