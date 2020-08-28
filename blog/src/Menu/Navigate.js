@@ -1,56 +1,274 @@
 import React from "react";
-import mapboxgl from "mapbox-gl";
+import {
+  withGoogleMap,
+  GoogleMap,
+  withScriptjs,
+  InfoWindow,
+  Marker,
+} from "react-google-maps";
+import Geocode from "react-geocode";
+import Autocomplete from "react-google-autocomplete";
+import { Descriptions } from "antd";
 
-mapboxgl.accessToken =
-  "pk.eyJ1IjoiZGluZXNoLWxhbDI5IiwiYSI6ImNrZThxczdyMjB6ZDQycm1pZ3RkbDZ6aGsifQ.uIh-N1d3yewYMGDjDEb4uQ";
+const {
+  MarkerWithLabel,
+} = require("react-google-maps/lib/components/addons/MarkerWithLabel");
 
-export default class Navigate extends React.Component {
-  mapRef = React.createRef();
+Geocode.setApiKey("AIzaSyATyrJWZVXed10msibEhg2KPAKzKjA3ykY");
+Geocode.enableDebug();
 
-  constructor(props: Props) {
-    super(props);
-    this.state = {
-      lng: 92.7199291,
-      lat: 11.7042913,
-      zoom: 10,
-    };
-  }
+class Navigate extends React.Component {
+  state = {
+    address: "",
+    city: "",
+    area: "",
+    state: "",
+    zoom: 15,
+    height: 500,
+    mapPosition: {
+      lat: 0,
+      lng: 0,
+    },
+    markerPosition: {
+      lat: 0,
+      lng: 0,
+    },
+  };
 
   componentDidMount() {
-    const { lng, lat, zoom } = this.state;
-
-    const map = new mapboxgl.Map({
-      container: this.mapRef.current,
-      style: "mapbox://styles/dinesh-lal29/cke8u17at08fw19mqzp2vbnor",
-      center: [lng, lat],
-      zoom,
-    });
-
-    map.on("move", () => {
-      const { lng, lat } = map.getCenter();
-
-      this.setState({
-        lng: lng.toFixed(4),
-        lat: lat.toFixed(4),
-        zoom: map.getZoom().toFixed(2),
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition((position) => {
+        this.setState(
+          {
+            mapPosition: {
+              lat: position.coords.latitude,
+              lng: position.coords.longitude,
+            },
+            markerPosition: {
+              lat: position.coords.latitude,
+              lng: position.coords.longitude,
+            },
+          },
+          () => {
+            Geocode.fromLatLng(
+              position.coords.latitude,
+              position.coords.longitude
+            ).then(
+              (response) => {
+                console.log(response);
+                const address = response.results[0].formatted_address,
+                  addressArray = response.results[0].address_components,
+                  city = this.getCity(addressArray),
+                  area = this.getArea(addressArray),
+                  state = this.getState(addressArray);
+                console.log("city", city, area, state);
+                this.setState({
+                  address: address ? address : "",
+                  area: area ? area : "",
+                  city: city ? city : "",
+                  state: state ? state : "",
+                });
+              },
+              (error) => {
+                console.error(error);
+              }
+            );
+          }
+        );
       });
-    });
+    } else {
+      console.error("Geolocation is not supported by this browser!");
+    }
   }
 
+  getCity = (addressArray) => {
+    let city = "";
+    for (let i = 0; i < addressArray.length; i++) {
+      if (
+        addressArray[i].types[0] &&
+        "administrative_area_level_2" === addressArray[i].types[0]
+      ) {
+        city = addressArray[i].long_name;
+        return city;
+      }
+    }
+  };
+
+  getArea = (addressArray) => {
+    let area = "";
+    for (let i = 0; i < addressArray.length; i++) {
+      if (addressArray[i].types[0]) {
+        for (let j = 0; j < addressArray[i].types.length; j++) {
+          if (
+            "sublocality_level_1" === addressArray[i].types[j] ||
+            "locality" === addressArray[i].types[j]
+          ) {
+            area = addressArray[i].long_name;
+            return area;
+          }
+        }
+      }
+    }
+  };
+
+  getState = (addressArray) => {
+    let state = "";
+    for (let i = 0; i < addressArray.length; i++) {
+      for (let i = 0; i < addressArray.length; i++) {
+        if (
+          addressArray[i].types[0] &&
+          "administrative_area_level_1" === addressArray[i].types[0]
+        ) {
+          state = addressArray[i].long_name;
+          return state;
+        }
+      }
+    }
+  };
+
+  onChange = (event) => {
+    this.setState({ [event.target.name]: event.target.value });
+  };
+
+  onInfoWindowClose = (event) => {};
+
+  onMarkerDragEnd = (event) => {
+    let newLat = event.latLng.lat(),
+      newLng = event.latLng.lng();
+
+    Geocode.fromLatLng(newLat, newLng).then(
+      (response) => {
+        const address = response.results[0].formatted_address,
+          addressArray = response.results[0].address_components,
+          city = this.getCity(addressArray),
+          area = this.getArea(addressArray),
+          state = this.getState(addressArray);
+        this.setState({
+          address: address ? address : "",
+          area: area ? area : "",
+          city: city ? city : "",
+          state: state ? state : "",
+          markerPosition: {
+            lat: newLat,
+            lng: newLng,
+          },
+          mapPosition: {
+            lat: newLat,
+            lng: newLng,
+          },
+        });
+      },
+      (error) => {
+        console.error(error);
+      }
+    );
+  };
+
+  onPlaceSelected = (place) => {
+    console.log("plc", place);
+    const address = place.formatted_address,
+      addressArray = place.address_components,
+      city = this.getCity(addressArray),
+      area = this.getArea(addressArray),
+      state = this.getState(addressArray),
+      latValue = place.geometry.location.lat(),
+      lngValue = place.geometry.location.lng();
+
+    console.log("latvalue", latValue);
+    console.log("lngValue", lngValue);
+
+    // Set these values in the state.
+    this.setState({
+      address: address ? address : "",
+      area: area ? area : "",
+      city: city ? city : "",
+      state: state ? state : "",
+      markerPosition: {
+        lat: latValue,
+        lng: lngValue,
+      },
+      mapPosition: {
+        lat: latValue,
+        lng: lngValue,
+      },
+    });
+  };
+
   render() {
-    const { lng, lat, zoom } = this.state;
+    const AsyncMap = withScriptjs(
+      withGoogleMap((props) => (
+        <GoogleMap
+          defaultZoom={this.state.zoom}
+          defaultCenter={{
+            lat: this.state.mapPosition.lat,
+            lng: this.state.mapPosition.lng,
+          }}
+        >
+          {/* InfoWindow on top of marker */}
+
+          {/*Marker*/}
+          <Marker
+            google={this.props.google}
+            name={"Marine park"}
+            draggable={true}
+            onDragEnd={this.onMarkerDragEnd}
+            position={{
+              lat: this.state.markerPosition.lat,
+              lng: this.state.markerPosition.lng,
+            }}
+          />
+          <InfoWindow
+            onClose={this.onInfoWindowClose}
+            position={{
+              lat: this.state.markerPosition.lat + 0.0018,
+              lng: this.state.markerPosition.lng,
+            }}
+          >
+            <div>
+              <span style={{ padding: 0, margin: 0 }}>
+                {this.state.address}
+              </span>
+            </div>
+          </InfoWindow>
+          <Marker />
+
+          <Autocomplete
+            style={{
+              width: "100%",
+              height: "50px",
+              paddingLeft: "16px",
+              marginTop: "2px",
+              marginBottom: "2rem",
+            }}
+            onPlaceSelected={this.onPlaceSelected}
+            types={["(regions)"]}
+          />
+        </GoogleMap>
+      ))
+    );
 
     return (
-      <div>
-        <div className="inline-block absolute top left mt12 ml12 bg-darken75 color-white z1 py6 px12 round-full txt-s txt-bold">
-          <div>{`Longitude: ${lng} Latitude: ${lat} Zoom: ${zoom}`}</div>
-        </div>
-        <div
-          style={{ width: "100vw", height: "85vh" }}
-          ref={this.mapRef}
-          className="absolute top right left bottom"
+      <div style={{ padding: "1rem", margin: "0 auto", maxWidth: 1000 }}>
+        <Descriptions bordered>
+          <Descriptions.Item label="City">{this.state.city}</Descriptions.Item>
+          <Descriptions.Item label="Area">{this.state.area}</Descriptions.Item>
+          <Descriptions.Item label="State">
+            {this.state.state}
+          </Descriptions.Item>
+          <Descriptions.Item label="Address">
+            {this.state.address}
+          </Descriptions.Item>
+        </Descriptions>
+
+        <AsyncMap
+          googleMapURL="https://maps.googleapis.com/maps/api/js?key=AIzaSyATyrJWZVXed10msibEhg2KPAKzKjA3ykY&libraries=places"
+          loadingElement={<div style={{ height: `100%` }} />}
+          containerElement={<div style={{ height: this.state.height }} />}
+          mapElement={<div style={{ height: `100%` }} />}
         />
       </div>
     );
   }
 }
+
+export default Navigate;
