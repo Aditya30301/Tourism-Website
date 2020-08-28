@@ -3,9 +3,9 @@ import { NavLink } from "react-router-dom";
 import "../Component/Components.css";
 import React360 from "../Component/ParaImg";
 import Neon from "../Component/Neon";
-import VideoComponent from "../Component/VideoApp";
+import VedioComponent from "../Component/VideoApp";
 //import Container from "@material-ui/core/Container";
-const Home = () => {
+const VideoGallery = () => {
   return (
     <div className="MainComponent">
       <section id="header" className="d-flex align-items-center">
@@ -48,11 +48,9 @@ const Home = () => {
           </div>
         </div>
       </section>
-      <React360 />
-      <Neon />
-      <VideoComponent />
+      <VedioComponent />
     </div>
   );
 };
 
-export default Home;
+export default VideoGallery;

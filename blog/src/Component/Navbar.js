@@ -89,6 +89,17 @@ const Navbar = () => {
                         exact
                         className="nav-link"
                         activeClassName="menu_active"
+                        to="/VideoGallery"
+                      >
+                        Video Gallery
+                      </NavLink>
+                    </li>
+
+                    <li className="nav-item">
+                      <NavLink
+                        exact
+                        className="nav-link"
+                        activeClassName="menu_active"
                         to="/Navigate"
                       >
                         Navigate
