@@ -15,7 +15,7 @@ class ParaImg extends Component {
   render() {
     return (
       <div>
-        <h1>Pannellum React Component</h1>
+        <h1>360 Images</h1>
         <Pannellum
           width="100%"
           height="500px"
