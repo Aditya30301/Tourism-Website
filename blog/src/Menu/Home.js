@@ -1,7 +1,6 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import "../Component/Components.css";
-import Neon from "../Component/Neon";
 //import Container from "@material-ui/core/Container";
 const Home = () => {
   return (
@@ -46,8 +45,6 @@ const Home = () => {
           </div>
         </div>
       </section>
-
-      <Neon />
     </div>
   );
 };

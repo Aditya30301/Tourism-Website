@@ -10,6 +10,7 @@ import Service from "./Menu/Service";
 import Navigate from "./Menu/Navigate";
 import PhotoGallery from "./Menu/PhotoGallery";
 import VideoGallery from "./Menu/VideoGallery";
+import Blog from "./Menu/Blog";
 //bootstrap5 css styles for appying
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle";
@@ -36,6 +37,7 @@ function App() {
         <Route exact path="/Navigate" component={Navigate} />
         <Route exact path="/PhotoGallery" component={PhotoGallery} />
         <Route exact path="/VideoGallery" component={VideoGallery} />
+        <Route exact path="/Blog" component={Blog} />
         {/*Redirect url if any of those match*/}
         <Redirect to="/" />
       </Switch>

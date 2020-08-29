@@ -100,6 +100,18 @@ const Navbar = () => {
                         exact
                         className="nav-link"
                         activeClassName="menu_active"
+                        to="/Blog"
+                        Blog
+                      >
+                        Blog
+                      </NavLink>
+                    </li>
+
+                    <li className="nav-item">
+                      <NavLink
+                        exact
+                        className="nav-link"
+                        activeClassName="menu_active"
                         to="/Navigate"
                       >
                         Navigate

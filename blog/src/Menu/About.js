@@ -1,8 +1,7 @@
 import React from "react";
-import "../Component/Components.css";
 import { Container } from "react-bootstrap";
 import "./About.css";
-import { NavLink } from "react-router-dom";
+// import { NavLink } from "react-router-dom";
 //import { Carousel } from "react-bootstrap";
 const About = () => {
   return (
