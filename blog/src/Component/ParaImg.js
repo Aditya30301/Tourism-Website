@@ -8,7 +8,7 @@ class ParaImg extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      mediaPhoto: [myImage],
+      mediaPhoto: [imgone],
     };
   }
 
