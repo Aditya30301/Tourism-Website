@@ -2,23 +2,25 @@ import React, { Component } from "react";
 
 import { Pannellum } from "pannellum-react";
 import myImage from "../images/samu.jpg";
-//import imgone from "../images/pone.jpg";
-
+import imgone from "../images/pone.jpg";
+import Typography from "@material-ui/core/Typography";
 class ParaImg extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      mediaPhoto: [myImage],
+      mediaPhoto: [imgone],
     };
   }
 
   render() {
     return (
       <div>
-        <h1>360 Images</h1>
+        <Typography variant="h2">
+          <center>360 Experience</center>
+        </Typography>
         <Pannellum
-          height="400px"
-          width="fit"
+          width="100%"
+          height="500px"
           image={this.state.mediaPhoto}
           pitch={10}
           yaw={180}

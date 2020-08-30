@@ -1,9 +1,6 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import "../Component/Components.css";
-import React360 from "../Component/ParaImg";
-import Neon from "../Component/Neon";
-import VideoComponent from "../Component/VideoApp";
 //import Container from "@material-ui/core/Container";
 const Home = () => {
   return (
@@ -48,10 +45,6 @@ const Home = () => {
           </div>
         </div>
       </section>
-
-      <React360 />
-      <Neon />
-      <VideoComponent />
     </div>
   );
 };

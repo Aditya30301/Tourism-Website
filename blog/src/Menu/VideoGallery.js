@@ -1,8 +1,6 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import "../Component/Components.css";
-import React360 from "../Component/ParaImg";
-import Neon from "../Component/Neon";
 import VedioComponent from "../Component/VideoApp";
 //import Container from "@material-ui/core/Container";
 const VideoGallery = () => {
