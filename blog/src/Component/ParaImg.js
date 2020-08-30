@@ -2,7 +2,7 @@ import React, { Component } from "react";
 
 import { Pannellum } from "pannellum-react";
 import myImage from "../images/samu.jpg";
-import imgone from "../images/pone.jpg";
+//import imgone from "../images/pone.jpg";
 
 class ParaImg extends Component {
   constructor(props) {
@@ -17,8 +17,8 @@ class ParaImg extends Component {
       <div>
         <h1>360 Images</h1>
         <Pannellum
-          width="100%"
-          height="500px"
+          height="400px"
+          width="fit"
           image={this.state.mediaPhoto}
           pitch={10}
           yaw={180}

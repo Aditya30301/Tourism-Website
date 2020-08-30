@@ -48,6 +48,7 @@ const Home = () => {
           </div>
         </div>
       </section>
+
       <React360 />
       <Neon />
       <VideoComponent />
